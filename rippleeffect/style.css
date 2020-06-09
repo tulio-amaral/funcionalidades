@@ -1,0 +1,45 @@
+@import url('https://fonts.google.com/css2?familiy=Rublik:wght@500&display=swap');
+
+.ripple{
+  pointer-events: none;
+  position:absolute;
+
+  border-radius:50%;
+  background-color: #f2f3f7;
+  opacity: 0;
+
+  animation: rippleAnimation .5s ease-out;
+}
+
+@keyframes rippleAnimation{
+  from {opacity: .75; transform: scale(0);}
+  to {opactiy: .1; transform: scale(1)}
+}
+.btn{
+  position: relative;
+  overflow: hidden;
+
+  font-family:'Rublik', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #f2f3f7;
+  background:#191919;
+  border-radius: 5px;
+
+  padding: 15px 50px;
+
+  transition-property: opacity, box-shadow;
+  transition: .25 ease-in-out;
+}
+
+.btn:hover{
+  cursor: pointer;
+
+  opacity: .8;
+  box-shadow: 0 14px 28px rgba(0,0,0,.25),
+              0 10px 10px rgba(0,0,0,.25);
+}
